@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<ul>
+        {% for oy in oylar %}
+        	<li>{{ oy }}</li>
+        {% endfor %}
+    </ul>
+    <img src="{% static 'img/Screenshot.png' %}" alt="" width="500">
+{% endblock %}
