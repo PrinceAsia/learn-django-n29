@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Weekdays
+{% endblock %}
+
+{% block content %}
+	<h1>Weekdays</h1>
+    <ul>
+        {% for kun in hafta %}
+            <li>{{ kun }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
