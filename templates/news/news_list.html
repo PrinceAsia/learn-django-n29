@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	News page
+{% endblock %}
+
+{% block content %}
+	<h1>News page</h1>
+    <form action="">
+{#        <input type="text" name="search" placeholder="Insert keyword for search">#}
+        <input type="text" name="search" placeholder="Insert keyword for search">
+        <input type="submit" value="Search">
+    </form>
+    <ul>
+        {% for xabar in yangilik %}
+            <li>
+                <a href="{% url 'news_detail' xabar.id %}">{{ xabar.news_title }}</a>
+                <span class="badge bg-primary">{{ xabar.news_category }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

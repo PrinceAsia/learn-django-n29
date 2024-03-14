@@ -4,7 +4,7 @@
 {% block content %}
 	<ul>
         {% for oy in oylar %}
-        	<li>{{ oy }}</li>
+        	<li><a href="{% url 'month_view' forloop.counter0 %}">{{ oy.0 }}</a></li>
         {% endfor %}
     </ul>
     <img src="{% static 'img/Screenshot.png' %}" alt="" width="500">

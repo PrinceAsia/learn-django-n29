@@ -5,5 +5,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('weekdays/', include('app_weekdays.urls')),
     path('month/', include('app_month.urls')),
+    path('news/', include('app_news.urls')),
     path('', include('app_pages.urls')),
 ]
